@@ -506,7 +506,7 @@ pre {
 
             <br><br>
             <div class="mx-auto">
-                <center><img class="card-img-top" src="./mfiles/gifs/Tasks.gif" style="width:700"></center>
+                <img class="card-img-top" src="./mfiles/gifs/main.gif" style="width:900">
             </div>
 <!-- 
             <div class="mx-auto">
@@ -527,21 +527,23 @@ pre {
         <hr>
         <h2>Method</h2>
             <br>
+            FISH operates in two phases. The first phase obtains a non-parametric base policy
+            through offline imitation from demonstrations. In the second phase, corrective residuals over 
+            this base policy are learned through inverse RL using optimal transport (OT) based trajectory-matching 
+            between the expert and agent behavior.
+            <br><br>
+
             <div class="mx-auto">
-                <center><img class="card-img-top" src="mfiles/method.png" style="width:950px"></center>
+                <center><img class="card-img-top" src="mfiles/method.png" style="width:700px"></center>
             </div>
 
-            <center><strong>A schematic of FISH. The first phase obtains a base policy
-                through offline imitation from demonstrations. The second phase
-                learns a residual model from online interactions.</strong></center>
-        <br>
         <hr>
 
 
         <hr>
         <h2>Robot Results</h2>
             <br>
-            <center><strong>We evaluate FISH on 9 tasks of varying difficulty across 3 different robot morphologies - a robot hand, a robotic arm, and a mobile robot. We observe an average success rate of 93%, which is 3.8x higher than prior state-of-the-art methods in visual imitation and IRL.</strong></center>
+            We evaluate FISH on 9 tasks of varying difficulty across 3 different robot morphologies - a robot hand, a robotic arm, and a mobile robot. We observe an average success rate of 93%, which is 3.8x higher than prior state-of-the-art methods in visual imitation and IRL.
             <div class="mx-auto">
                 <center><img class="card-img-top" src="mfiles/gifs/robot_results.gif" style="width:950px"></center>
             </div>
@@ -549,29 +551,47 @@ pre {
         <br>
         <hr>
 
+        <h2>Generalization to New Object Configurations</h2>
+        <br>
+        FISH exhibits generalization to new object configurations unseen in the expert demonstrations.
+        <br><br>
+        <div class="mx-auto">
+            <img class="card-img-top" src="mfiles/gifs/pos_variation.gif" style="width:900px">
+        </div>
+        <br><br>
+        <hr>
+
         <h2>Generalization to New Objects</h2>
         <br>
-        <center><strong>Interestingly, FISH also exhibits generalization to new objects in the form of different bills and cards for the picking-up task and different types of bread for the flipping task. However, it fails on extreme variations in the visual and dynamic properties of the object.</strong></center>
+        Interestingly, FISH also exhibits generalization to new objects in the form of different bills and cards for the picking-up task and different types of bread for the flipping task. However, it fails on extreme variations in the visual and dynamic properties of the object.
+        <!-- <div class="mx-auto">
+            <center><img class="card-img-top" src="mfiles/gifs/variations2.gif" style="width:1500px"></center>
+        </div> -->
+        <br><br>
         <div class="mx-auto">
-            <center><img class="card-img-top" src="mfiles/gifs/variations2.gif" style="width:950px"></center>
+            <center><img class="card-img-top" src="mfiles/gifs/variations_bagel.gif" style="width:800px"></center>
         </div>
+        <br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="mfiles/gifs/variations_slide.gif" style="width:800px"></center>
+        </div>
+        <br><br>
         <hr>
 
         <h2>Training Runs</h2>
         <br>
-        <center><strong>We provide videos displaying the progression of learning during the residual learning phase in FISH.</strong></center>
-
-        <br>
-          <div class="col-4-sm">
-            <img class="center" src="./mfiles/gifs/Card Slide.gif" style="width: 49.5%;">
-            <img class="center" src="./mfiles/gifs/Bottle Spin.gif" style="width: 49.5%;">
+        We provide videos displaying the progression of learning during the residual learning phase in FISH.
+        <br><br>
+        <div class="col-4-sm">
+            <img class="center" src="./mfiles/gifs/Flip Bagel.gif" style="width: 49.5%;">
+            <img class="center" src="./mfiles/gifs/Cube Flip.gif" style="width: 49.5%;">
           </div>
           <div>
-            <img class="center" src="./mfiles/gifs/Flip Bagel.gif" style="width: 49.5%;">
+            <img class="center" src="./mfiles/gifs/Bottle Spin.gif" style="width: 49.5%;">
             <img class="center" src="./mfiles/gifs/Key Lock.gif" style="width: 49.5%;">
           </div>
           <div class="center">
-            <center><img class="center" src="./mfiles/gifs/Cube Flip.gif" style="width: 49.5%;"></center>
+            <center><img class="center" src="./mfiles/gifs/Card Slide.gif" style="width: 49.5%;"></center>
           </div>
         <br><br>
         <hr>
