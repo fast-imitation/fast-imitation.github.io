@@ -1,0 +1,584 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 12px;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title> Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:title" content="Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+    </head>
+
+ <body>
+
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://siddhanthaldar.github.io/">Siddhant Haldar*</a>,
+                <a href="https://jyopari.github.io/">Jyothish Pari*</a>,
+                <a href="https://raianant.github.io/">Anant Rai</a>,
+                <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a>
+            </div>
+        </center>
+        <center>
+        <!-- <div class="affiliations">
+            <span><sup>1</sup> Improbable AI Lab</span>
+            <span><sup>2</sup> MIT</span><br/>
+        </div> -->
+
+        <br>* Equal contribution
+
+        <div class="affil-row">
+            <div class="venue text-center"><b>New York University</b></div>
+        </div>
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <!-- <a class="paper-btn" href="https://arxiv.org/pdf/2211.15657.pdf"> -->
+            <a class="paper-btn" href="">
+                    <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <div class="paper-btn-coming-soon">
+                <!-- <a class="paper-btn" href="https://github.com/anuragajay/decision-diffuser/tree/main/code"> -->
+                <a class="paper-btn" href="">
+                        <span class="material-icons"> code </span>
+                    Code
+                </a>
+            </div>
+        </div></div>
+    </div>
+
+    <br>
+
+    <div class="embed-container">
+        <iframe width="640" height="360" 
+        src="https://www.youtube.com/embed/7gkGMEI8tyI" 
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+    <style>
+        .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        }
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+    </style>
+
+    <!-- <section id="teaser-image">
+        <center>
+            <figure>
+                <source src="./mfiles/video.m4v" type="video/mp4">
+            </figure>
+        </center>
+    </section> -->
+    
+    
+
+    
+    <section id="abstract"/>
+        <hr>
+        <h2>Abstract</h2>
+        <div class="flex-row">
+            <p>
+                While imitation learning provides us with an efficient toolkit to train robots, learning skills that are robust to 
+                environment variations remains a significant challenge. Current approaches address this challenge by relying either
+                on large amounts of demonstrations that span environment variations or on handcrafted reward functions that require state estimates.
+                Both directions are not scalable to fast imitation. In this work, we present Fast Imitation of Skills from Humans (FISH), a
+                new imitation learning approach that can learn robust visual skills with less than a minute of human demonstrations. Given a
+                weak base-policy trained by offline imitation of demonstrations, FISH computes rewards that correspond to the “match” between
+                the robot’s behavior and the demonstrations. These rewards are then used to adaptively update a residual policy that adds
+                on to the base-policy. Across all tasks, FISH requires at most twenty minutes of interactive learning to imitate demonstrations
+                on object configurations that were not seen in the demonstrations. Importantly, FISH is constructed to be versatile, which allows it
+                to be used across robot morphologies (e.g. xArm, Allegro, Stretch) and camera configurations (e.g. third-person, eye-in-hand). Our
+                experimental evaluations on 9 different tasks show that FISH achieves an average success rate of 93%, which is around 3.8× higher 
+                than prior state-of-the-art methods.
+            </p>
+        </div>
+    </section>
+    <section id="method"/>
+        <hr>
+        <h2>Fast Imitation of Skills from Humans (FISH)</h2>
+
+            <br><br>
+
+            <div class="mx-auto">
+                <center><img class="card-img-top" src="mfiles/method.png" style="width:950px"></center>
+            </div>
+
+            <!-- <br> -->
+
+            <center><strong>A schematic of FISH. The first phase obtains a base policy
+                through offline imitation from demonstrations. The second phase
+                learns a residual model from online interactions.</strong></center>
+
+
+    </section>
+        
+
+    <section id="results">
+        <hr>
+        <h2>Robot Results</h2>
+            <br>
+            <center><strong>We evaluate FISH on 9 tasks of varying difficulty across 3 different robot morphologies - a robot hand, a robotic arm, and a mobile robot. We observe an average success rate of 93%, which is 3.8x higher than prior state-of-the-art methods in visual imitation and IRL.</strong></center>
+            <div class="mx-auto">
+                <center><img class="card-img-top" src="mfiles/gifs/robot_results.gif" style="width:950px"></center>
+            </div>
+
+        <br>
+        <hr>
+
+        <h2>Generalization to New Objects</h2>
+        <br>
+        <center><strong>Interestingly, FISH also exhibits generalization to new objects in the form of different bills and cards for the picking-up task and different types of bread for the flipping task. However, it fails on extreme variations in the visual and dynamic properties of the object.</strong></center>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="mfiles/gifs/variations2.gif" style="width:950px"></center>
+        </div>
+        <hr>
+
+        <h2>Training Runs</h2>
+        <br>
+        <center><strong>We provide videos displaying the progression of learning during the residual learning phase in FISH.</strong></center>
+
+        <br>
+          <div class="col-4-sm">
+            <img class="center" src="./mfiles/gifs/Card Slide.gif" style="width: 49.5%;">
+            <img class="center" src="./mfiles/gifs/Bottle Spin.gif" style="width: 49.5%;">
+          </div>
+          <div>
+            <img class="center" src="./mfiles/gifs/Flip Bagel.gif" style="width: 49.5%;">
+            <img class="center" src="./mfiles/gifs/Key Lock.gif" style="width: 49.5%;">
+          </div>
+          <div class="center">
+            <center><img class="center" src="./mfiles/gifs/Cube Flip.gif" style="width: 49.5%;"></center>
+          </div>  
+
+    </section>
+   
+    <section id="paper">
+        <h2>Bibtex</h2>
+        <!-- <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
+            @article{ajay2022conditional,
+                title={Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations},
+                author={Haldar, Siddhant and Pari, Jyothish and Rai, Anant and Pinto, Lerrel},
+                journal={arXiv preprint arXiv:2211.15657},
+                year={2022}
+            } -->
+        </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
+        </p></div>
+
+    </section>
+
+    <section>
+        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+    </section>
+    
+
+
+</div>
+</body>
+</html>
